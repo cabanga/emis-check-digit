@@ -3,5 +3,17 @@
   "version": "1.0.1",
   "main": "index.js",
   "author": "cabanga <manucabanga@gmail.com>",
+  "description": "Lib para gerar digitos unicos - Referencias Multicaixa - EMIS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cabanga/emis-check-digit"
+  },
+  "keywords": [
+    "Angola pagamentos",
+    "Pagamentos por Referencia",
+    "EMIS",
+    "ITGest Angola"
+  ],
+  "homepage": "https://github.com/cabanga/emis-check-digit#readme",
   "license": "MIT"
 }
