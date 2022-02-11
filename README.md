@@ -21,7 +21,7 @@ import foobar
 
 # Importa a lib e inicializa com o número da entidade gerada pela EMIS
 
-const EMIS = require('./emis')
+const EMIS = require('emis')
 
 //00123 é o número da entidade
 let _emis = new EMIS('00123')
