@@ -17,8 +17,6 @@ yarn add emis-check-digit --save
 ## Como usar
 
 ```javascript
-import foobar
-
 # Importa a lib e inicializa com o número da entidade gerada pela EMIS
 
 const EMIS = require('emis')
