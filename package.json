@@ -1,6 +1,6 @@
 {
   "name": "emis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "author": "cabanga <manucabanga@gmail.com>",
   "description": "Lib para gerar digitos unicos - Referencias Multicaixa - EMIS",
