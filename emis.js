@@ -1,5 +1,5 @@
 
-class Emis {
+module.exports = class Emis {
     entity_number
 
 
@@ -62,5 +62,3 @@ class Emis {
         return result.replace('.', '')
     }
 }
-
-module.exports = Emis
