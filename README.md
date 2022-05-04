@@ -7,11 +7,11 @@
 Para instação podes usar [npm](https://www.npmjs.com/) or yarn.
 
 ```bash
-npm i emis-check-digit
+npm i emis
 ```
 
 ```bash
-yarn add emis-check-digit --save
+yarn add emis --save
 ```
 
 ## Como usar
@@ -22,21 +22,23 @@ yarn add emis-check-digit --save
 const EMIS = require('emis')
 
 //00123 é o número da entidade
-let _emis = new EMIS('00123')
+//1 é a referencia do tipo de producto
+let _emis = new EMIS('00123', 1)
 
 // passa como opções o total da factura ou serviço à ser gerado a referencia.
 // 50 é o valor do serviço a pagar
 
-let options = {
-    total: 50
+let data = {
+    sequencial: 1,
+    total: 1300.98
 }
 
 //Finalmente passa a sequencia a ser gerada. (1 é a sequencia das ref)
-_emis.checkDigit(1, options)
-.then(response => console.log(response))
+_emis.checkDigit(data)
+    .then(response => console.log(response))
 
 # resultado
-001230000000955000
+000000951300981
 
 // Atenção que as referencias devem ser unicas, é da responsábilidade das entidades
 // controlarem da melhor forma as suas sequencias

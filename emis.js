@@ -1,23 +1,26 @@
 
-module.exports = class Emis {
+class Emis {
     entity_number
+    product_code
 
 
-    constructor(entity_number) {
+    constructor(entity_number, product_code) {
         this.entity_number = entity_number
+        this.product_code = product_code
     }
 
-    async checkDigit(sequencial, options = {}) {
-        let uniq_digit = await this.generate_uniq_ref(sequencial, options.total)
+    async checkDigit(options = {}) {
+        let uniq_digit = await this.generate_uniq_ref(options.sequencial, options.total)
         return uniq_digit
     }
 
     async generate_uniq_ref(sequencial, total) {
         let array_by_positions = await this.get_array(sequencial)
         let result = await this.calculate_weight_with_position(array_by_positions)
-        let check_digit = await this.pad_reference(result, 9)
-        let new_reference = this.generate_unig_ref(check_digit, total)
-        return new_reference
+        let merge_ref = this.generate_unig_ref(result, total)
+        let check_digit = await this.pad_reference(merge_ref, 15)
+
+        return check_digit
     }
 
     async get_array(number) {
@@ -58,7 +61,10 @@ module.exports = class Emis {
     }
 
     generate_unig_ref(check_digit, total) {
-        let result = `${this.entity_number}${check_digit}${total.toFixed(2)}`
+        let result = `${check_digit}${total.toFixed(2)}${this.product_code}`
         return result.replace('.', '')
     }
+
 }
+
+module.exports = Emis;
