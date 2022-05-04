@@ -1,5 +1,5 @@
 
-class Emis {
+class EmisCheckDigit {
     entity_number
     product_code
 
@@ -67,4 +67,4 @@ class Emis {
 
 }
 
-module.exports = Emis;
+module.exports = EmisCheckDigit;

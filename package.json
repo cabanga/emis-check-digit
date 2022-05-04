@@ -1,7 +1,7 @@
 {
-  "name": "emis",
+  "name": "emis-check-digit",
   "version": "1.0.1",
-  "main": "emis.js",
+  "main": "emis-check-digit.js",
   "author": "cabanga <manucabanga@gmail.com>",
   "description": "Lib para gerar digitos unicos - Referencias Multicaixa - EMIS",
   "repository": {
