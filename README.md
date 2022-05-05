@@ -7,11 +7,11 @@
 Para instação podes usar [npm](https://www.npmjs.com/) or yarn.
 
 ```bash
-npm i emis
+npm i emis-check-digit
 ```
 
 ```bash
-yarn add emis --save
+yarn add emis-check-digit --save
 ```
 
 ## Como usar
@@ -19,7 +19,7 @@ yarn add emis --save
 ```javascript
 # Importa a lib e inicializa com o número da entidade gerada pela EMIS
 
-const EMIS = require('emis')
+const EMIS = require('emis-check-digit')
 
 //00123 é o número da entidade
 //1 é a referencia do tipo de producto
